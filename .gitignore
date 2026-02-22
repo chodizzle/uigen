@@ -49,3 +49,6 @@ next-env.d.ts
 # database
 /prisma/dev.db
 /prisma/dev.db-journal
+
+# Claude Code local settings (machine-specific, should not be committed)
+.claude/settings.local.json
