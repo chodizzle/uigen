@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Change Demo — Before & After</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  </style>
+</head>
+<body class="bg-neutral-950 min-h-screen p-12">
+
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-zinc-400 text-xs tracking-widest uppercase mb-10">Prompt change — visual comparison</h1>
+
+    <div class="grid grid-cols-2 gap-8">
+
+      <!-- BEFORE -->
+      <div>
+        <p class="text-zinc-500 text-xs tracking-widest uppercase mb-6">Before</p>
+        <div class="bg-gray-100 rounded p-10 flex flex-col items-start gap-4">
+          <!-- old primary -->
+          <button class="px-4 py-2 rounded font-medium bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-200 cursor-pointer">
+            Default Button
+          </button>
+          <!-- old secondary -->
+          <button class="px-4 py-2 rounded font-medium bg-gray-500 text-white hover:bg-gray-600 transition-colors duration-200 cursor-pointer">
+            Secondary Button
+          </button>
+          <!-- old danger -->
+          <button class="px-4 py-2 rounded font-medium bg-red-500 text-white hover:bg-red-600 transition-colors duration-200 cursor-pointer">
+            Danger Button
+          </button>
+          <!-- old disabled -->
+          <button class="px-4 py-2 rounded font-medium bg-blue-300 text-white cursor-not-allowed" disabled>
+            Disabled Button
+          </button>
+        </div>
+        <ul class="mt-4 text-zinc-600 text-xs space-y-1">
+          <li>— <code>bg-gray-100</code> background</li>
+          <li>— <code>bg-blue-500 / gray-500 / red-500</code></li>
+          <li>— <code>rounded</code>, <code>px-4 py-2</code></li>
+          <li>— <code>transition-colors</code> only</li>
+          <li>— No letter-spacing, no depth</li>
+        </ul>
+      </div>
+
+      <!-- AFTER -->
+      <div>
+        <p class="text-zinc-500 text-xs tracking-widest uppercase mb-6">After</p>
+        <div class="bg-zinc-950 rounded-2xl border border-zinc-800 p-10 flex flex-col items-start gap-4">
+          <!-- new primary -->
+          <button class="px-6 py-3 rounded-xl font-semibold tracking-tight bg-emerald-600 text-white shadow-lg shadow-emerald-900/30 hover:bg-emerald-700 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:shadow-none transition-all duration-150 cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-zinc-950">
+            Primary Button
+          </button>
+          <!-- new secondary -->
+          <button class="px-6 py-3 rounded-xl font-semibold tracking-tight bg-zinc-800 text-zinc-100 border border-zinc-700 shadow-md shadow-zinc-900/50 hover:bg-zinc-700 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:shadow-none transition-all duration-150 cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-offset-2 focus:ring-offset-zinc-950">
+            Secondary Button
+          </button>
+          <!-- new outline -->
+          <button class="px-6 py-3 rounded-xl font-semibold tracking-tight border border-zinc-700 text-zinc-100 hover:bg-zinc-900 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-none transition-all duration-150 cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-offset-2 focus:ring-offset-zinc-950">
+            Outline Button
+          </button>
+          <!-- new disabled -->
+          <button class="px-6 py-3 rounded-xl font-semibold tracking-tight bg-emerald-600 text-white opacity-40 cursor-not-allowed" disabled>
+            Disabled Button
+          </button>
+        </div>
+        <ul class="mt-4 text-zinc-400 text-xs space-y-1">
+          <li>+ <code>bg-zinc-950</code> dark background</li>
+          <li>+ <code>bg-emerald-600</code> with colored shadow</li>
+          <li>+ <code>rounded-xl</code>, <code>px-6 py-3</code></li>
+          <li>+ <code>hover:-translate-y-0.5 + shadow</code></li>
+          <li>+ <code>tracking-tight</code>, focus rings</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
